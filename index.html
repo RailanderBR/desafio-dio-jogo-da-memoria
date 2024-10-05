@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Memória</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/reset.css">
     <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
     <div class="container">
-        <h2>JOGO DA MEMÓRIA</h2>
+        <h2>Game Snack Bar</h2>
         <div class="game"></div>
         <button class="reset" onclick="window.location.reload()">
-            RESET GAME</button>
-    </div>
-    
-
+         Let's start!</button>
+    </div>    
+    <audio controls class="sound" autoplay>
+    <source src="/src/sounds/videoplayback.m4a" type="audio/mp4">
+    </audio>
     <script src="/src/scripts/engine.js" defer></script>
 </body>
 </html>

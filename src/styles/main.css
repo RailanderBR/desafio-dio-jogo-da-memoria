@@ -4,6 +4,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-image:url(../images/background-image.png);
+    background-size: cover;
     user-select: none;
 }
 
@@ -15,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(rgb(254, 199, 111), rgb(237, 206, 163), rgb(206, 181, 156), #ad8680, rgb(70, 45, 48), rgb(37, 27, 19));
+    background: linear-gradient( #542a1b, #842d28, #c55b42, #c49482,#ba806e);
     padding: 40px 60px;
 }
 
@@ -29,8 +30,8 @@ h2 {
 .reset {
     padding: 15px 20p;
     width: 100%;
-    color: #000;
-    background: linear-gradient(to right,#f5945c 0%, #654146 100%);
+    color: #fff;
+    background: linear-gradient(to right,#111111 0%, #6e4f53 100%);
     border-radius:4dvh;
     font-size: 1.5em;
     letter-spacing: 0.1em;
@@ -43,6 +44,7 @@ h2 {
 .reset:focus {
     color: lightseagreen;
     background-color:#262809;
+    border-radius: 50%;
 }
 .game {
     width: 430px;
@@ -70,18 +72,30 @@ h2 {
 }
 
 .item::after{
+    border-radius: 55%;
+    font-size: 20px;
     content:"";
-    position: absolute;
+    position:absolute;
     inset: 0;
-    background: #0c0000;
+    background: radial-gradient(#181a06,#3a1d12, #8f4130);
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
 }
 
-.item.boxOpen{
+.item.boxOpen{ 
     transform: rotateY(0deg);
 }
 .boxOpen::after, .boxMatch::after {
     transform: rotateY(180deg);
 }
+
+.sound, audio {
+    display: grid;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;
+    opacity: 0.5;
+    height: 100vh;
+}
+
